@@ -1,0 +1,40 @@
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tech Blog</title>
+    <link rel="stylesheet" type="text/css" href="/css/jass.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Welcome to My Tech Blog</h1>
+      <p>Your go-to source for all things tech!</p>
+    </header>
+    <nav>
+      <a href="/">Home</a>
+      {{#if loggedIn}}
+        <button id="logout" class="btn-no-style">Logout</button>
+      {{else}}
+        <a href="/login">Login</a>
+      {{/if}}
+    </nav>
+    <main>
+      <aside>
+        <h2>Enjoy the galleries!</h2>
+      </aside>
+      <div class="gallery">
+        {{{body}}}
+      </div>
+    </main>
+    {{#if loggedIn}}
+      <script src="/js/logout.js"></script>
+    {{/if}}
+    <footer>
+      <p>&copy; 2022 My Tech Blog. All rights reserved.</p>
+    </footer>
+  </body>
+
+</html>
